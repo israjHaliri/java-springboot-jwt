@@ -1,7 +1,6 @@
-package com.haliri.israj.notebookservice.filter;
+package com.haliri.israj.filter;
 
-import com.haliri.israj.notebookservice.utils.AppUtils;
-import com.haliri.israj.notebookservice.utils.JwtTokenUtil;
+import com.haliri.israj.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -41,13 +40,9 @@ public class JwtAuthenticationTokenFilter extends UsernamePasswordAuthentication
         if(StringUtils.hasText(authToken) && authToken.startsWith("Bearer "))
             authToken = authToken.substring(7);
 
-//        AppUtils.getLogger(this).info("TOKEN LOGIN IS : {} ",authToken);
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
-//        AppUtils.getLogger(this).info("USERNAME FROM TOKEN IS : {} ",username);
-//        AppUtils.getLogger(this).info("SECURITY CONTEXT HOLDER IS : {} ",SecurityContextHolder.getContext().getAuthentication());
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
-//            AppUtils.getLogger(this).info("GOING TO VALIDATE TOKEN");
             UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
 
             if (jwtTokenUtil.validateToken(authToken, userDetails)) {

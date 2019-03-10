@@ -1,7 +1,7 @@
-package com.haliri.israj.notebookservice.service;
+package com.haliri.israj.service;
 
-import com.haliri.israj.notebookservice.domain.Role;
-import com.haliri.israj.notebookservice.domain.User;
+import com.haliri.israj.domain.Role;
+import com.haliri.israj.domain.User;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -21,7 +21,7 @@ public class UserService {
         user.setId(1L);
         user.setEmail("israj.haliri@gmail.com");
         user.setUsername("israjhaliri");
-        user.setPassword("$2a$10$w.13k5XV2IbMO5UjsTGzxOwSVndhD5YkpOvaAw2H/RcA7XpSEpd/q");
+        user.setPassword("$2a$10$i1r3wh0WnFum1d39GFwzfeN9.VIwjJW1ma6l3KvXdD7nocWsAtKf.");
 
         Role role = new Role();
         role.setId(1L);

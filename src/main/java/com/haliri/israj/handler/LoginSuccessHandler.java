@@ -1,8 +1,8 @@
-package com.haliri.israj.notebookservice.handler;
+package com.haliri.israj.handler;
 
-import com.haliri.israj.notebookservice.config.UserDetailsConfig;
-import com.haliri.israj.notebookservice.utils.AppUtils;
-import com.haliri.israj.notebookservice.utils.JwtTokenUtil;
+import com.haliri.israj.config.UserDetailsConfig;
+import com.haliri.israj.utils.AppUtils;
+import com.haliri.israj.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;

@@ -1,6 +1,6 @@
-package com.haliri.israj.notebookservice.config;
+package com.haliri.israj.config;
 
-import com.haliri.israj.notebookservice.filter.RestFilter;
+import com.haliri.israj.filter.RestFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,10 +25,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         if (!registry.hasMappingForPattern("/**")) {
             registry.addResourceHandler("/**").addResourceLocations("classpath:/");
         }
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new ThymeleafLayoutInterceptor());
     }
 }

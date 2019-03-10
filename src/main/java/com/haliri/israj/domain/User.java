@@ -1,4 +1,4 @@
-package com.haliri.israj.notebookservice.domain;
+package com.haliri.israj.domain;
 
 import java.util.Set;
 
@@ -11,6 +11,7 @@ public class User {
     String username;
     String password;
     String email;
+
     private Set<Role> roles;
 
     public Long getId() {

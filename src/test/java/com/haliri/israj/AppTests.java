@@ -1,4 +1,4 @@
-package com.haliri.israj.notebookservice;
+package com.haliri.israj;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,14 +9,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class NotebookServiceApplicationTests {
+public class AppTests {
 
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
 	@Test
 	public void contextLoads() {
-		System.out.println("password encoder : "+passwordEncoder.encode("123"));
+		System.out.println("password encoder : "+passwordEncoder.encode("12345678"));
 	}
 
 }

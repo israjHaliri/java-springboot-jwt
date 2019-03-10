@@ -1,6 +1,6 @@
-package com.haliri.israj.notebookservice.handler;
+package com.haliri.israj.handler;
 
-import com.haliri.israj.notebookservice.utils.AppUtils;
+import com.haliri.israj.utils.AppUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.WebAttributes;

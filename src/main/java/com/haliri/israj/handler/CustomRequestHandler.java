@@ -1,8 +1,8 @@
-package com.haliri.israj.notebookservice.handler;
+package com.haliri.israj.handler;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.haliri.israj.notebookservice.utils.AppUtils;
+import com.haliri.israj.utils.AppUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;

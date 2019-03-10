@@ -1,8 +1,8 @@
-package com.haliri.israj.notebookservice.config;
+package com.haliri.israj.config;
 
-import com.haliri.israj.notebookservice.filter.JwtAuthenticationTokenFilter;
-import com.haliri.israj.notebookservice.handler.LoginSuccessHandler;
-import com.haliri.israj.notebookservice.handler.LoginFailureHandler;
+import com.haliri.israj.filter.JwtAuthenticationTokenFilter;
+import com.haliri.israj.handler.LoginSuccessHandler;
+import com.haliri.israj.handler.LoginFailureHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -52,20 +52,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/adm/**").hasRole("ADM")
-                .anyRequest().authenticated()
-                .and().authorizeRequests()
                 .antMatchers("/**").permitAll().anyRequest().permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll().loginProcessingUrl("/auth")
                 .successHandler(loginSuccessHandler)
                 .failureHandler(loginFailureHandler)
                 .and()
-                .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class)
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .invalidateHttpSession(true)
                 .and()
+                .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling().authenticationEntryPoint(new Http403ForbiddenEntryPoint())
-                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).toString();
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).toString();
     }
 
     @Bean

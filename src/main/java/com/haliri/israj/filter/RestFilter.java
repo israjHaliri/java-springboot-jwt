@@ -1,11 +1,9 @@
-package com.haliri.israj.notebookservice.filter;
+package com.haliri.israj.filter;
 
-import com.haliri.israj.notebookservice.handler.CustomRequestHandler;
-import com.haliri.israj.notebookservice.utils.AppUtils;
+import com.haliri.israj.handler.CustomRequestHandler;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**

@@ -1,7 +1,5 @@
-package com.haliri.israj.notebookservice.utils;
+package com.haliri.israj.utils;
 
-import com.haliri.israj.notebookservice.config.UserDetailsConfig;
-import com.haliri.israj.notebookservice.domain.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -92,7 +90,6 @@ public class JwtTokenUtil implements Serializable {
     }
 
     public Boolean validateToken(String token, UserDetails userDetails) {
-//        AppUtils.getLogger(this).info("USER VALIDATE TOKEN [{}]",userDetails.toString());
         final String username = getUsernameFromToken(token);
         if (username.equals(userDetails.getUsername()) && !isTokenExpired(token)) {
             return true;

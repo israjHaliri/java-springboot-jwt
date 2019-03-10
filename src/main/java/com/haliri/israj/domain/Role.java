@@ -1,4 +1,4 @@
-package com.haliri.israj.notebookservice.domain;
+package com.haliri.israj.domain;
 
 import java.util.Set;
 

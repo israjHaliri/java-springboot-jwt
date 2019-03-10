@@ -1,12 +1,12 @@
-package com.haliri.israj.notebookservice;
+package com.haliri.israj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NotebookServiceApplication {
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotebookServiceApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 }

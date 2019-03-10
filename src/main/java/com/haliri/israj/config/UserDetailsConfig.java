@@ -1,11 +1,11 @@
-package com.haliri.israj.notebookservice.config;
+package com.haliri.israj.config;
 
 
-import com.haliri.israj.notebookservice.domain.Role;
-import com.haliri.israj.notebookservice.domain.User;
-import com.haliri.israj.notebookservice.service.UserService;
+import com.haliri.israj.domain.Role;
+import com.haliri.israj.domain.User;
+import com.haliri.israj.service.UserService;
 
-import com.haliri.israj.notebookservice.utils.AppUtils;
+import com.haliri.israj.utils.AppUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
